@@ -9,9 +9,9 @@
 
 ## Project Members
 
-Dhruba Dey
-Mohammad Arif Istiak
-Abdullah Mohammad Shad
+Dhruba Dey <br>
+Mohammad Arif Istiak <br>
+Abdullah Mohammad Shad <br>
 
 ## About Laravel
 
