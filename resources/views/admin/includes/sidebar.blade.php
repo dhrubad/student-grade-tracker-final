@@ -63,7 +63,7 @@
 
 
 
-            <!-- Create Menu -->
+            <!-- Departments Menu -->
 
           <li class="nav-item menu">
             <a href="#" class="nav-link">
@@ -91,6 +91,44 @@
           </li>
 
 
+          <!-- Semesters and Sessions Menu -->
+
+          <!-- <li class="nav-item menu">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Semesters and Sessions
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/admin/view-department') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Semesters</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/admin/view-department') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Sessions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/admin/create-department') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Semesters</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/admin/create-department') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Sessions</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li> -->
 
           <!-- Courses Menu -->
                       <!-- Create Menu -->
