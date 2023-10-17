@@ -9,12 +9,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Admin Dashboard --> Create Courses</h1>
+            <h1 class="m-0">Admin Dashboard --- Edit Departments</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Create Courses</li>
+              <li class="breadcrumb-item active">Edit Departments</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,37 +25,34 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-                    <!-- general form elements -->
-                    <div class="card card-primary">
+            <!-- general form elements -->
+            <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Create Courses</h3>
+                <h3 class="card-title">Edit Departments</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="{{ url('/admin/update/'.$department->id) }}" method="post">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
-                      <label for="dept_name">Course Name</label>
-                      <input type="text" class="form-control" name="" id="" placeholder="Course Name">
-                    </div>
-                  <div class="form-group">
-                    <label for="dept_name">Course Title</label>
-                    <input type="text" class="form-control" name="" id="" placeholder="Course Title">
-                  </div>  
-                  <div class="form-group">
-                    <label for="dept_name">Course Code</label>
-                    <input type="text" class="form-control" name="" id="" placeholder="Course Code">
+                    <label for="">Department Name</label>
+                    <input type="text" class="form-control" name="name" value="{{ $department->name }}" id="" placeholder="Department Name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Established At</label>
-                    <input type="date" class="form-control" name="" id="" placeholder="">
+                    <label for="">Short Name</label>
+                    <input type="text" class="form-control" name="shortName" value="{{ $department->short_name }}" id="" placeholder="Short Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Established At</label>
+                    <input type="date" class="form-control" name="estAt" value="{{ $department->established_at }}" id="" placeholder="">
                   </div>
                   
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Update</button>
                 </div>
               </form>
             </div>

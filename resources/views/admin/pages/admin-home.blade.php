@@ -69,7 +69,12 @@
                       <td><span class="tag tag-success">{{ $user->created_at }}</span></td>
                       <td>{{ $user->updated_at }}</td>
                       <td>{{ $user->status }}</td>
-                      <td></td>
+                      <td>
+                        <!-- for edit -->
+                        <a href="" class="btn btn-primary">Edit</a>
+                        <!-- for delete -->
+                        <a href="" class="btn btn-danger">Delete</a>
+                      </td>
                     </tr>
                     @endforeach
                   </tbody>

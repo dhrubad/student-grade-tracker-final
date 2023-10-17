@@ -14,18 +14,7 @@ class AdminWebsiteController extends Controller
     }
 
     
-    public function create_course(){
-        return view('admin.pages.courses.create-courses');
-    }
-    public function view_course(){
-        return view('admin.pages.courses.view-courses');
-    }
-    public function create_department(){
-        return view('admin.pages.departments.create-departments');
-    }
-    public function view_department(){
-        return view('admin.pages.departments.view-departments');
-    }
+    
     public function enrollment_requests(){
         return view('admin.pages.requestmenu.enrollmentreq');
     }

@@ -26,6 +26,61 @@
     <section class="content">
       <div class="container-fluid">
         
+      <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Short Name</th>
+                      <th>Established At</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach($departments as $department)
+                    <tr>
+                      <td>{{ $department->name }}</td>
+                      <td>{{ $department->short_name }}</td>
+                      <td>{{ $department->established_at }}</td>
+                      <td>
+                        <!-- for edit -->
+                        <a href="{{ url('admin/edit/'.$department->id) }}" class="btn btn-primary">Edit</a>
+                        <!-- for delete -->
+                        <a href="{{ url('admin/delete/'.$department->id) }}" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal{{ $department->id }}">Delete</a>
+                        <!-- The Modal -->
+                            <div class="modal" id="myModal{{ $department->id }}">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                  <!-- Modal Header -->
+                                  <div class="modal-header">
+                                    <h4 class="modal-title">Delete Confirmation</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                  </div>
+
+                                  <!-- Modal body -->
+                                  <div class="modal-body">
+                                    Are you sure you want to delete <b>{{$department->name}}</b>?
+                                  </div>
+
+                                  <!-- Modal footer -->
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Return</button>
+                                    <a href="{{ url('admin/delete/'.$department->id) }}" class="btn btn-danger" >Delete</a>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                      </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
+              </div>
+
+
+
 
       </div>
       <!--/. container-fluid -->

@@ -12,9 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('departments', function (Blueprint $table) {
-            $table->id();
-            $table->string('dept_name');
+            $table->id(); // id bigint primary key auto_increment
+            $table->string('name',200);
+            $table->string('short_name',20);
             $table->date('established_at');
+            $table->timestamps(); //created_at, updated_at
         });
     }
 

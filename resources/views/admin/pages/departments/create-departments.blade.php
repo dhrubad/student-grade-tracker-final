@@ -32,15 +32,20 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="{{ url('/admin/store') }}" method="post">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="dept_name">Department Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Department Name">
+                    <label for="">Department Name</label>
+                    <input type="text" class="form-control" name="name" id="" placeholder="Department Name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Established At</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="">
+                    <label for="">Short Name</label>
+                    <input type="text" class="form-control" name="shortName" id="" placeholder="Short Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Established At</label>
+                    <input type="date" class="form-control" name="estAt" id="" placeholder="">
                   </div>
                   
                 </div>

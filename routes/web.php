@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentWebsiteController;
 use App\Http\Controllers\AdminWebsiteController;
+use App\Http\Controllers\CreateDepartmentsController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,10 +54,39 @@ Route::middleware(['auth','role:admin'])->group(function(){
 
     Route::get('/admin/home',[AdminWebsiteController::class, 'home'])->name('admin.pages.admin-home');
     Route::get('/admin/home', [AdminWebsiteController::class, 'home']);
-    Route::get('/admin/create-course', [AdminWebsiteController::class, 'create_course']);
-    Route::get('/admin/view-course', [AdminWebsiteController::class, 'view_course']);
-    Route::get('/admin/create-department', [AdminWebsiteController::class, 'create_department']);
-    Route::get('/admin/view-department', [AdminWebsiteController::class, 'view_department']);
+
+    //courses
+    
+    
+
+    //departments
+    //create department page view
+    Route::get('/admin/create-department', [CreateDepartmentsController::class, 'create_department']);
+    //department info post
+    Route::post('/admin/store', [CreateDepartmentsController::class, 'store']);
+    //view departments
+    Route::get('/admin/view-department', [CreateDepartmentsController::class, 'view_department']);
+    //edit
+    Route::get('admin/edit/{id}', [CreateDepartmentsController::class, 'edit']);
+    Route::post('admin/update/{id}', [CreateDepartmentsController::class, 'update']);
+    //delete
+    Route::get('admin/delete/{id}', [CreateDepartmentsController::class, 'delete']);
+
+
+    //Courses
+    //create Course page view
+    Route::get('/admin/create-course', [CourseController::class, 'create_course']);
+    //Course info post
+    Route::post('/admin/course-store', [CourseController::class, 'store']);
+    //view Course
+    Route::get('/admin/view-course', [CourseController::class, 'view_course']);
+    //edit
+    Route::get('admin/course-edit/{id}', [CourseController::class, 'edit']);
+    Route::post('admin/course-update/{id}', [CourseController::class, 'update']);
+    //delete
+    Route::get('admin/course-delete/{id}', [CourseController::class, 'delete']);
+
+    //enrollments
     Route::get('/admin/enrollment-requests', [AdminWebsiteController::class, 'enrollment_requests']);
     Route::get('/admin/new-registrations', [AdminWebsiteController::class, 'new_registrations']);
    
