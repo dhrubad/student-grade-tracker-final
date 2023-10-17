@@ -69,7 +69,12 @@ Route::middleware(['auth','role:admin'])->group(function(){
     Route::get('/student/view-available-courses', [StudentWebsiteController::class, 'available_courses']);
     Route::get('/student/course-recommendation', [StudentWebsiteController::class, 'course_recommendation']);
     Route::get('/student/view-courses', [StudentWebsiteController::class, 'show_courses']);
+    Route::get('/student/view-enrollment', [StudentWebsiteController::class, 'view_enrollment']);
+    Route::get('/student/new-enrollment', [StudentWebsiteController::class, 'new_enrollment']);
+    Route::get('/student/reports', [StudentWebsiteController::class, 'view_reports']);
+    Route::get('/student/enrollment-form', [StudentWebsiteController::class, 'print_enrollment']);
+    Route::get('/student/results', [StudentWebsiteController::class, 'print_results']);
    
    }); //End Group Faculty Middleware
 
-   Route::get('/student/random', [StudentWebsiteController::class, 'random_page']);
+//    Route::get('/student/random', [StudentWebsiteController::class, 'random_page']);

@@ -47,13 +47,13 @@
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="{{ url('/') }}" class="nav-link">
+          <a href="{{ url('/student/view-enrollment') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>View Enrollment Status</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{ url('/student/home') }}" class="nav-link">
+          <a href="{{ url('/student/new-enrollment') }}" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>New Enrollment</p>
           </a>
@@ -106,19 +106,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/') }}" class="nav-link">
+                <a href="{{ url('/student/reports') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Reports</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('/') }}" class="nav-link">
+                <a href="{{ url('/student/enrollment-form') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Enrollment Form</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('/student/random') }}" class="nav-link">
+                <a href="{{ url('/student/results') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Results</p>
                 </a>

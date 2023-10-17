@@ -25,7 +25,41 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Create Courses</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="dept_name">Course Title</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Course Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="dept_name">Course Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Course Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="dept_name">Course Code</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Course Code">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Established At</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="">
+                  </div>
+                  
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
 
       </div>
       <!--/. container-fluid -->

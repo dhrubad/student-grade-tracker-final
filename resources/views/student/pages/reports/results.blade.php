@@ -27,10 +27,10 @@
     <section class="content">
       <div class="container-fluid">
         
-      <div class="col-sm-6">
+      <!-- <div class="col-sm-6">
             <h2 class="m-0">Welcome to Student Grade Tracker!<br></h2>
             <h3>You are logged in!</h3>
-          </div>
+          </div> -->
 
       </div>
       <!--/. container-fluid -->

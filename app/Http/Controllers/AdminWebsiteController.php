@@ -7,10 +7,13 @@ use DB;
 
 class AdminWebsiteController extends Controller
 {
+    // db sql command to get student list
     public function home(){
         $users = DB::select('select * from users where role="student" ');
         return view('admin.pages.admin-home',['users'=>$users]);
     }
+
+    
     public function create_course(){
         return view('admin.pages.courses.create-courses');
     }
