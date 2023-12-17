@@ -154,6 +154,12 @@
                   <p>Create Courses</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{ url('/admin/create-course') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Courses</p>
+                </a>
+              </li>
               
             </ul>
           </li>
