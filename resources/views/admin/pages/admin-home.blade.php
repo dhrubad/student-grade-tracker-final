@@ -57,6 +57,7 @@
                       <th>Created At</th>
                       <th>Updated At</th>
                       <th>Status</th>
+                      <th>Role</th>
                       <th>Action</th>
                     </tr>
                   </thead>
@@ -69,6 +70,7 @@
                       <td><span class="tag tag-success">{{ $user->created_at }}</span></td>
                       <td>{{ $user->updated_at }}</td>
                       <td>{{ $user->status }}</td>
+                      <td>{{ $user->role }}</td>
                       <td>
                         <!-- for edit -->
                         <a href="" class="btn btn-primary">Edit</a>
